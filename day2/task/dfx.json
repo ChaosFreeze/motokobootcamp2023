@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "backend": {
+      "main": "src/backend/main.mo",
+      "type": "motoko"
+    },
+    "frontend": {
+      "dependencies": [
+        "backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/frontend/public/index.html"
+      },
+      "source": [
+        "src/frontend/public"
+      ],
+      "type": "assets"
+    },
+    "webpage": {
+      "dependencies": [
+        "backend"
+      ],
+      "webpage": {
+        "main": "src/webpage/webpage.mo",
+        "type": "motoko"
+      }
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.12.1",
+  "version": 1
+}
